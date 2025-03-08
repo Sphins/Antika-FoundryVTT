@@ -1,57 +1,46 @@
 {
-    "id": "antika",
-    "name": "antika",
-    "title": "Antika V2",
-    "description": "Système de jeu Antika V2 pour Foundry VTT",
-    "version": "0.1.0",
-    "authors": [
-      {
-        "name": "Sphins",
-        "email": "contact@exemple.com",
-        "url": "https://github.com/Sphins"
-      }
-    ],
-"compatibility": {
-  "minimum": "12",
-  "verified": "12"
-},
-    "system": "antika",
-    "manifest": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/system.json",
-    "download": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/antika.zip",
-    "esmodules": ["./main.js"],
-    "styles": ["styles/styles.css"],
-    "packs": [
-      {
-        "name": "antika-compendium",
-        "label": "Compendium Antika",
-        "path": "packs/compendiums.db",
-        "type": "Item"
-      }
-    ],
-    "languages": [
-      {
-        "lang": "fr",
-        "name": "Français",
-        "path": "localization/fr.json"
-      },
-      {
-        "lang": "en",
-        "name": "English",
-        "path": "localization/en.json"
-      }
-    ],
-    "gridDistance": 1,
-    "gridUnits": "m",
-    "initiative": "sophos", 
-    "primaryTokenAttribute": "attributes.pv.value",
-    "actorTypes": ["character", "npc"],
-    "itemTypes": ["arme", "armure", "pouvoir", "objet"],
-    "abilities": {
-      "soma": { "label": "Soma" },
-      "sophos": { "label": "Sophos" },
-      "symbiose": { "label": "Symbiose" },
-      "hubris": { "label": "Hubris" },
-      "aristeia": { "label": "Aristéia" }
+  "id": "antika",
+  "name": "antika",
+  "title": "Antika V2",
+  "description": "Système de jeu Antika V2 pour Foundry VTT",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Sphins",
+      "email": "contact@exemple.com",
+      "url": "https://github.com/Sphins"
     }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "manifest": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/system.json",
+  "download": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/antika.zip",
+  "esmodules": ["./main.js"],
+  "styles": ["styles/styles.css"],
+  "packs": [
+    {
+      "name": "antika-compendium",
+      "label": "Compendium Antika",
+      "path": "packs/compendiums.db",
+      "type": "Item"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "localization/fr.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "localization/en.json"
+    }
+  ],
+  "grid": {
+    "distance": 1,
+    "units": "m"
   }
-  
+}

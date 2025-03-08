@@ -1,33 +1,37 @@
 // Importation des autres fichiers du système
 import { registerSettings } from "./settings.js";
 import { preloadTemplates } from "./templates.js";
-import { AntikaActor } from "./actor.js";
-import { AntikaItem } from "./item.js";
-import { DiceAntika } from "./dice.js";
+import { AntikaActor } from "./scripts/actor.js";
+import { AntikaItem } from "./scripts/item.js";
+import { DiceAntika } from "./scripts/dice.js";
 
 /**
  * Initialisation du système Antika pour Foundry VTT
  */
-Hooks.once("init", async function() {
+Hooks.once("init", async function () {
     console.log("Antika | Initialisation du système Antika...");
 
-    // Enregistrement des paramètres de configuration
-    registerSettings();
+    // Définition des types d'acteurs et d'objets
+    CONFIG.ANTIKA = {
+        actorTypes: ["character", "npc"],
+        itemTypes: ["arme", "armure", "pouvoir", "objet"],
+        abilities: {
+            "soma": { "label": "Soma" },
+            "sophos": { "label": "Sophos" },
+            "symbiose": { "label": "Symbiose" },
+            "hubris": { "label": "Hubris" },
+            "aristeia": { "label": "Aristéia" }
+        }
+    };
 
-    // Définition des classes d'objets du système
-    CONFIG.Actor.documentClass = AntikaActor;
-    CONFIG.Item.documentClass = AntikaItem;
-
-    // Préchargement des templates HTML
-    await preloadTemplates();
-
-    console.log("Antika | Système prêt !");
+    console.log("Antika | Configuration chargée !");
 });
+
 
 /**
  * Quand le système est prêt (données chargées)
  */
-Hooks.once("ready", async function() {
+Hooks.once("ready", async function () {
     console.log("Antika | Le système est maintenant prêt !");
 });
 
