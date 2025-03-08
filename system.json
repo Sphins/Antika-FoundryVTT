@@ -1,4 +1,5 @@
 {
+    "id": "antika",
     "name": "antika",
     "title": "Antika V2",
     "description": "Système de jeu Antika V2 pour Foundry VTT",
@@ -10,12 +11,14 @@
         "url": "https://github.com/Sphins"
       }
     ],
-    "compatibleCoreVersion": "11",
-    "minimumCoreVersion": "11",
+"compatibility": {
+  "minimum": "12",
+  "verified": "12"
+},
     "system": "antika",
     "manifest": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/system.json",
     "download": "https://github.com/Sphins/Antika-FoundryVTT/releases/latest/download/antika.zip",
-    "esmodules": ["scripts/main.js"],
+    "esmodules": ["./main.js"],
     "styles": ["styles/styles.css"],
     "packs": [
       {
